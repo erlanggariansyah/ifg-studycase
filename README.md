@@ -28,23 +28,30 @@ Client → Producer API → Kafka Topic `orders` → Consumer → Topic `process
 # How to run
 
 1. Clone project
+```text
 git clone https://github.com/erlanggariansyah/ifg-studycase.git
 cd ifg-studycase
+```
 
 2. Build service
+```text
 cd producer
 mvn clean package
 cd ..
 cd consumer
 mvn clean package
 cd ..
+```
 
 3. Build project
+```text
 docker compose up --build
+```
 
 # API
 - Endpoint POST /api/v1/orders
 - Example Request:
+```text
 curl --location 'http://localhost:8080/api/v1/orders' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -52,3 +59,4 @@ curl --location 'http://localhost:8080/api/v1/orders' \
   "customerName":"Erlangga",
   "amount":2000
 }'
+```
